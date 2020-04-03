@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using ParksLookup.Models;
 using Microsoft.AspNetCore.Authorization;
 using ParksLookup.Services;
-using ParksLookup.Entities;
 
 namespace ParksLookup.Controllers
 {

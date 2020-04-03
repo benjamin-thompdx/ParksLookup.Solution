@@ -4,8 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ParksLookup.Models;
 using Microsoft.AspNetCore.Authorization;
-using ParksLookup.Services;
-using ParksLookup.Entities;
 
 namespace ParksLookup.Controllers
 {
@@ -21,7 +19,6 @@ namespace ParksLookup.Controllers
       _db = db;
     }
 
-    // [AllowAnonymous]
     [HttpGet]
     public ActionResult<IEnumerable<Park>> Get(string management, string name, string location)
     {
