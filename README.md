@@ -139,6 +139,7 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * _Razor 2.2.0_
 * _ASP.NET Core JSON Web Token Authentication & Authorization_
 * _NSwag 13.3.0_
+* _REST API versioning with ASP.Net Core_
 * _[Postman](postman.com)_
 
 ## License
