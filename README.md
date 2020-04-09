@@ -119,7 +119,15 @@ DELETE /api/details/{id}
 https://localhost:5000/api/details/?description=death+valley+is+the+largest+u.s.+national+park+outside+alaska+at+3.4+million+acres&address=po+box+579+death+valley%2Cca+92328&rating=5
 ```
 
+## Further Exploration
+* Versioning
+  *_text_
+  
+* JWT Authentication
+  *_text_ 
 
+* NSwag
+  *_text_
 
 ## Known Bugs
 
