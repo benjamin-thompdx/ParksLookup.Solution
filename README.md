@@ -224,7 +224,7 @@ To view the source code for Versioning within the ParksLookup.Solution project d
     ```
  _Make sure the application is runnning, open Postman, and perform the folowing commands:_
  
- 1. Create GET request ```http://localhost:5000/api/parks``
+ 1. Create GET request ```http://localhost:5000/api/parks```
  2. Press the ```Send``` button
 
     _Now you should see a ```status: 200 OK``` message_
