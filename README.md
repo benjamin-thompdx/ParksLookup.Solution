@@ -234,9 +234,19 @@ To view the source code for Versioning within the ParksLookup.Solution project d
 ### NSwag
 To view the source code for NSwag within the ParksLookup.Solution project directory, navigate to:
  * ```ParksLookup.Solution/ParksLookup/Startup.cs```
- ```
- services.AddSwaggerDocument();
- ```
+    ```
+    services.AddSwaggerDocument();
+    ```
+ _Make sure the application is runnning, open Postman, and perform the folowing commands:_
+ 1. In your web browser, input the following url: ```http://localhost:5000/swagger/index.html#/Parks```
+ 2. Now you can view all API endpoints for:
+    
+    ```Details```
+    
+    ```Parks```
+    
+    ```Users```
+
 
 
 ## Known Bugs
