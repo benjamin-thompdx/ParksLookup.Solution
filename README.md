@@ -120,14 +120,80 @@ https://localhost:5000/api/details/?description=death+valley+is+the+largest+u.s.
 ```
 
 ## Further Exploration
-* Versioning
-  *_text_
-  
-* JWT Authentication
-  *_text_ 
+### JWT Authentication
+To view the source code for JWT authentication within the ParksLookup.Solution project directory, navigate to: ```ParksLookup.Solution/ParksLookup/Services/UserService.cs```
 
-* NSwag
-  *_text_
+_Make sure the application is runnning, open Postman, and perform the folowing commands:_
+
+1. Create POST request ```http://localhost:5000/users/authenticate```
+
+2. Within the body of your POST request insert the following: (Note: the body should be set to "raw" and "JSON")
+```
+{
+	"username": "bthom",
+	"password": "mypassword"
+}
+```
+
+3. Press the ```Send``` button
+
+_Now you should see a ```status: 200 OK``` message and a similar response in the body of your POST request:_
+```
+{
+    "id": 1,
+    "firstName": "Benjamin",
+    "lastName": "Thom",
+    "username": "bthom",
+    "password": null,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1ODY1NTM1NzAsImV4cCI6MTU4NzE1ODM3MCwiaWF0IjoxNTg2NTUzNTcwfQ.O0E71waveE2HncO6b8CQteNTQzkmwM6t5Hnqv45fwmc",
+    "details": null
+}
+```
+4. ```Copy``` the token recieved in step 3
+
+Example token:
+```eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IjEiLCJuYmYiOjE1ODY1NTM1NzAsImV4cCI6MTU4NzE1ODM3MCwiaWF0IjoxNTg2NTUzNTcwfQ.O0E71waveE2HncO6b8CQteNTQzkmwM6t5Hnqv45fwmc```
+
+5. Create GET request ```http://localhost:5000/api/parks```
+6. Navigate to the "authorization" tab in your GET request, click the "type" dropdown menu and select "OAuth 2.0", ```paste``` the token from step 4 into the "Access Token" input box, and hit "Send" on the GET request
+7. _Now you should see a ```status: 200 OK``` message and a similar response in the body of your GET request:_
+```
+[
+    {
+        "parkId": 1,
+        "management": "National",
+        "name": "Great Basin National Park",
+        "location": "Baker, NV",
+        "details": []
+    },
+    {
+        "parkId": 2,
+        "management": "National",
+        "name": "Tule Springs Fossil Beds National Monument",
+        "location": "Las Vegas, NV",
+        "details": []
+    },
+    {
+        "parkId": 3,
+        "management": "State",
+        "name": "Sand Harbor",
+        "location": "Incline Village, NV",
+        "details": []
+    },
+    {
+        "parkId": 4,
+        "management": "State",
+        "name": "Van Sickle",
+        "location": "South Lake Tahoe, CA",
+        "details": []
+    }
+]
+```
+
+### Versioning
+
+### NSwag
+
 
 ## Known Bugs
 
